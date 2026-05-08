@@ -429,7 +429,6 @@ h3 {
 }
 
 .credential-list article,
-.price-grid article,
 .testimonial-card {
   padding: 18px;
   background: var(--paper);
@@ -451,7 +450,6 @@ h3 {
 }
 
 .credential-list p,
-.price-grid p,
 .testimonial-card p {
   margin: 6px 0 0;
   color: var(--muted);
@@ -560,35 +558,11 @@ h3 {
   background: #f4eee6;
 }
 
-.price-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-}
-
 .testimonial-grid {
   display: grid;
   grid-column: 1 / -1;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
-}
-
-.pricing {
-  align-items: start;
-}
-
-.price-grid article {
-  min-height: 180px;
-}
-
-.price-grid span {
-  display: inline-flex;
-  margin-top: 28px;
-  padding: 8px 12px;
-  color: var(--rose-deep);
-  background: var(--rose);
-  border-radius: 999px;
-  font-weight: 700;
 }
 
 .booking {
@@ -740,8 +714,7 @@ textarea:focus {
     max-height: none;
   }
 
-  .testimonial-grid,
-  .price-grid {
+  .testimonial-grid {
     grid-template-columns: 1fr;
   }
 
