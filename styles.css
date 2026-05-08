@@ -314,7 +314,7 @@ h3 {
 }
 
 .credentials-photo {
-  width: min(100%, 390px);
+  width: min(100%, 340px);
   margin: 18px 0 0;
   overflow: hidden;
   border: 8px solid var(--paper);
@@ -324,9 +324,9 @@ h3 {
 
 .credentials-photo img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
-  object-position: center 58%;
+  object-position: center 28%;
 }
 
 .media-story {
@@ -797,7 +797,7 @@ textarea:focus {
   }
 
   .credentials-photo {
-    width: min(100%, 340px);
+    width: min(100%, 300px);
     margin-top: 16px;
   }
 
