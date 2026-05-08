@@ -35,6 +35,7 @@ body {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -210,6 +211,7 @@ h3 {
 
 .hero-media img {
   width: min(100%, 560px);
+  aspect-ratio: 1;
   max-height: min(520px, 62dvh);
   margin-inline: auto;
   object-fit: cover;
@@ -279,6 +281,22 @@ h3 {
   margin: 0;
 }
 
+.about-portrait {
+  width: min(100%, 420px);
+  margin: 28px 0 0;
+  overflow: hidden;
+  border: 8px solid var(--paper);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+
+.about-portrait img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center 52%;
+}
+
 .media-story {
   display: grid;
   grid-template-columns: minmax(140px, 0.34fr) minmax(0, 1fr);
@@ -296,14 +314,31 @@ h3 {
   width: 100%;
   aspect-ratio: 1;
   object-fit: cover;
+  object-position: center 56%;
   border: 6px solid var(--paper);
   border-radius: 22px;
   box-shadow: var(--shadow);
 }
 
+.media-panel h2,
 .video-panel h2 {
   max-width: 520px;
   font-size: clamp(38px, 5vw, 64px);
+}
+
+.feature-photo {
+  margin: 20px 0 0;
+  overflow: hidden;
+  border: 8px solid rgba(255, 255, 255, 0.82);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+
+.feature-photo img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center 54%;
 }
 
 .video-placeholder {
