@@ -334,6 +334,7 @@ h3 {
 }
 
 .feature-photo {
+  width: min(100%, 620px);
   margin: 16px 0 0;
   overflow: hidden;
   border: 8px solid rgba(255, 255, 255, 0.82);
@@ -343,7 +344,7 @@ h3 {
 
 .feature-photo img {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 5 / 3;
   object-fit: cover;
   object-position: center 54%;
 }
@@ -789,6 +790,7 @@ textarea:focus {
   }
 
   .feature-photo {
+    width: 100%;
     margin-top: 14px;
   }
 
