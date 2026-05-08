@@ -304,18 +304,18 @@ h3 {
 }
 
 .credentials {
-  padding-block: clamp(38px, 5.4vw, 68px);
+  padding-block: clamp(32px, 4.6vw, 58px);
 }
 
 .credentials-heading h2 {
-  max-width: 520px;
-  font-size: clamp(34px, 4.5vw, 58px);
-  line-height: 0.96;
+  max-width: 470px;
+  font-size: clamp(30px, 3.9vw, 50px);
+  line-height: 1;
 }
 
 .credentials-photo {
-  width: min(100%, 340px);
-  margin: 18px 0 0;
+  width: min(100%, 310px);
+  margin: 14px 0 0;
   overflow: hidden;
   border: 8px solid var(--paper);
   border-radius: 24px;
@@ -793,12 +793,12 @@ textarea:focus {
   }
 
   .credentials-heading h2 {
-    font-size: clamp(32px, 10vw, 46px);
+    font-size: clamp(30px, 8.8vw, 40px);
   }
 
   .credentials-photo {
-    width: min(100%, 300px);
-    margin-top: 16px;
+    width: min(100%, 280px);
+    margin-top: 14px;
   }
 
   .media-panel h2 {
