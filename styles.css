@@ -269,6 +269,12 @@ h3 {
   font-size: 18px;
 }
 
+.about-heading h2 {
+  max-width: 480px;
+  font-size: clamp(34px, 4.4vw, 58px);
+  line-height: 0.96;
+}
+
 .about-content {
   display: grid;
   gap: 14px;
@@ -283,7 +289,7 @@ h3 {
 
 .about-portrait {
   width: min(100%, 420px);
-  margin: 28px 0 0;
+  margin: 20px 0 0;
   overflow: hidden;
   border: 8px solid var(--paper);
   border-radius: 24px;
@@ -766,6 +772,15 @@ textarea:focus {
   .booking,
   .media-story {
     padding: 40px 16px;
+  }
+
+  .about-heading h2 {
+    font-size: clamp(32px, 10vw, 46px);
+  }
+
+  .about-portrait {
+    width: min(100%, 360px);
+    margin-top: 16px;
   }
 
   .media-accent {
