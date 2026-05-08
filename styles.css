@@ -305,11 +305,15 @@ h3 {
 
 .media-story {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(140px, 0.34fr) minmax(0, 1fr);
   gap: clamp(18px, 3.2vw, 40px);
   align-items: center;
   padding: clamp(22px, 3.2vw, 38px);
   background: linear-gradient(130deg, #eef3e6 0%, #fff 55%, #fae1cd 100%);
+}
+
+.media-panel {
+  grid-column: 2;
 }
 
 .media-accent {
@@ -691,6 +695,10 @@ textarea:focus {
   .booking,
   .section-grid {
     grid-template-columns: 1fr;
+  }
+
+  .media-panel {
+    grid-column: 1;
   }
 
   .hero {
