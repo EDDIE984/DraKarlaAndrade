@@ -306,9 +306,9 @@ h3 {
 .media-story {
   display: grid;
   grid-template-columns: minmax(140px, 0.34fr) minmax(0, 1fr);
-  gap: clamp(20px, 4vw, 48px);
+  gap: clamp(18px, 3.2vw, 40px);
   align-items: center;
-  padding: clamp(24px, 3.8vw, 44px);
+  padding: clamp(22px, 3.2vw, 38px);
   background: linear-gradient(130deg, #eef3e6 0%, #fff 55%, #fae1cd 100%);
 }
 
@@ -328,12 +328,13 @@ h3 {
 
 .media-panel h2,
 .video-panel h2 {
-  max-width: 520px;
-  font-size: clamp(38px, 5vw, 64px);
+  max-width: 500px;
+  font-size: clamp(32px, 4.2vw, 54px);
+  line-height: 0.98;
 }
 
 .feature-photo {
-  margin: 20px 0 0;
+  margin: 16px 0 0;
   overflow: hidden;
   border: 8px solid rgba(255, 255, 255, 0.82);
   border-radius: 24px;
@@ -781,6 +782,14 @@ textarea:focus {
   .about-portrait {
     width: min(100%, 360px);
     margin-top: 16px;
+  }
+
+  .media-panel h2 {
+    font-size: clamp(30px, 9vw, 44px);
+  }
+
+  .feature-photo {
+    margin-top: 14px;
   }
 
   .media-accent {
