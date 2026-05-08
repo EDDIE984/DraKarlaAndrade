@@ -202,7 +202,7 @@ module.exports = async function handler(req, res) {
   };
   const content = buildEmailContent(data, metadata);
   const subjectParts = [
-    "Solicitud de cita",
+    `${MAIL_FROM_NAME} - Solicitud de cita`,
     normalizeValue(data.nombre),
     normalizeValue(data.fecha),
     normalizeValue(data.hora),
