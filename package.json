@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "check:api": "node --check api/enviar.js"
+  },
+  "dependencies": {
+    "nodemailer": "^8.0.7"
+  }
+}
