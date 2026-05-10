@@ -27,8 +27,7 @@
   <body>
     <header class="site-header" data-header>
       <a class="brand" href="#inicio" aria-label="Ir al inicio">
-        <span class="brand-mark">KA</span>
-        <span>Dra. Karla Andrade</span>
+        <img src="image/LogoKarlaAndrade.png" alt="Dra. Karla Andrade" width="1200" height="416">
       </a>
       <nav class="nav" aria-label="Navegacion principal">
         <a href="#sobre-mi">Sobre mi</a>
@@ -186,23 +185,45 @@
 
       <section class="testimonials section-band">
         <div class="section-heading">
-          <p class="eyebrow">Testimoniales</p>
-          <h2>Experiencias reales de pacientes.</h2>
+          <p class="eyebrow">Contenido</p>
+          <h2>Conoce más sobre nuestra práctica.</h2>
         </div>
         <div class="testimonial-grid">
           <article class="testimonial-card">
-            <div class="video-placeholder small" role="img" aria-label="Espacio para video testimonial de paciente">
-              <span class="play-icon" aria-hidden="true"></span>
-              <p>Video testimonial 1</p>
-            </div>
-            <p>Espacio reservado para una experiencia real de paciente.</p>
+            <button class="reel-thumb"
+              data-src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F4044538549172410&show_text=false"
+              aria-label="Ver reel 1">
+              <div class="video-placeholder small">
+                <span class="play-icon" aria-hidden="true"></span>
+              </div>
+            </button>
           </article>
           <article class="testimonial-card">
-            <div class="video-placeholder small" role="img" aria-label="Espacio para segundo video testimonial">
-              <span class="play-icon" aria-hidden="true"></span>
-              <p>Video testimonial 2</p>
-            </div>
-            <p>Espacio reservado para una historia breve y cercana.</p>
+            <button class="reel-thumb"
+              data-src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1003784535689556&show_text=false"
+              aria-label="Ver reel 2">
+              <div class="video-placeholder small">
+                <span class="play-icon" aria-hidden="true"></span>
+              </div>
+            </button>
+          </article>
+          <article class="testimonial-card">
+            <button class="reel-thumb"
+              data-src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1625327845351782&show_text=false"
+              aria-label="Ver reel 3">
+              <div class="video-placeholder small">
+                <span class="play-icon" aria-hidden="true"></span>
+              </div>
+            </button>
+          </article>
+          <article class="testimonial-card">
+            <button class="reel-thumb"
+              data-src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1671137193890359&show_text=false"
+              aria-label="Ver reel 4">
+              <div class="video-placeholder small">
+                <span class="play-icon" aria-hidden="true"></span>
+              </div>
+            </button>
           </article>
         </div>
       </section>
@@ -278,7 +299,7 @@
     </main>
 
     <footer class="footer">
-      <p>Dra. Karla Andrade</p>
+      <img src="image/LogoKarlaAndrade.png" alt="Dra. Karla Andrade" width="1200" height="416" loading="lazy" decoding="async">
       <a href="#agenda">Agendar cita</a>
     </footer>
 
@@ -297,6 +318,16 @@
         "openingHours": ["Mo-Fr 09:00-15:00", "Mo-Fr 17:30-18:30", "Sa 09:00-13:00"]
       }
     </script>
+    <dialog id="video-modal" aria-label="Video">
+      <button id="modal-close" aria-label="Cerrar">✕</button>
+      <div class="modal-video-wrap">
+        <iframe id="modal-iframe" src="" scrolling="no" frameborder="0"
+          allowfullscreen="true"
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+        </iframe>
+      </div>
+    </dialog>
+
     <script src="script.js"></script>
   </body>
 </html>

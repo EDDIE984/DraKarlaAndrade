@@ -60,3 +60,24 @@ form?.addEventListener("submit", async (event) => {
     submitButton.disabled = false;
   }
 });
+
+const videoModal = document.getElementById("video-modal");
+const modalIframe = document.getElementById("modal-iframe");
+
+document.querySelectorAll(".reel-thumb").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    modalIframe.src = btn.dataset.src;
+    videoModal.showModal();
+  });
+});
+
+function closeVideoModal() {
+  videoModal.close();
+  modalIframe.src = "";
+}
+
+document.getElementById("modal-close").addEventListener("click", closeVideoModal);
+
+videoModal.addEventListener("click", (e) => {
+  if (e.target === videoModal) closeVideoModal();
+});
