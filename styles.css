@@ -1,3 +1,43 @@
+@font-face {
+  font-family: "Satoshi";
+  src: url("fuente/SATOSHI-BLACK-titulos.OTF") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url("fuente/SATOSHI-MEDIUM-titulos.OTF") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Caveat";
+  src: url("fuente/CAVEAT-VARIABLEFONT_WGHT-titulos.TTF") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Riccione";
+  src: url("fuente/RICCIONE-SERIAL REGULARITALIC.TTF") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helvetica Local";
+  src: url("fuente/HELVETICA-BOLD-FONT.TTF") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --page: #fbf8f4;
   --ink: #17120f;
@@ -11,8 +51,12 @@
   --line: rgba(23, 18, 15, 0.16);
   --shadow: 0 24px 60px rgba(45, 30, 22, 0.12);
   --radius: 8px;
-  --serif: "Instrument Serif", Georgia, serif;
-  --sans: "DM Sans", Arial, sans-serif;
+  --serif: "Satoshi", Georgia, serif;
+  --sans: "Satoshi", Arial, sans-serif;
+  --display: "Caveat", cursive;
+  --palette-rose: #ce92a1;
+  --palette-burgundy: #741d30;
+  --palette-charcoal: #2d2b29;
 }
 
 * {
@@ -101,10 +145,17 @@ a {
 .header-cta {
   min-height: 44px;
   padding: 11px 18px;
-  border: 1px solid var(--ink);
+  border: 1px solid var(--palette-burgundy);
   border-radius: 999px;
   font-size: 14px;
   font-weight: 700;
+  color: var(--palette-burgundy);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.header-cta:hover {
+  background: var(--palette-burgundy);
+  color: var(--paper);
 }
 
 .section-band {
@@ -126,9 +177,10 @@ a {
 .eyebrow {
   margin: 0 0 16px;
   color: var(--rose-deep);
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0;
+  font-family: var(--display);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
 
@@ -136,7 +188,6 @@ h1,
 h2 {
   margin: 0;
   font-family: var(--serif);
-  font-weight: 400;
   line-height: 0.92;
   text-wrap: balance;
 }
@@ -144,10 +195,12 @@ h2 {
 h1 {
   max-width: 560px;
   font-size: clamp(62px, 8.4vw, 112px);
+  font-weight: 900;
 }
 
 h2 {
   font-size: clamp(42px, 6.4vw, 86px);
+  font-weight: 500;
 }
 
 h3 {
@@ -176,22 +229,35 @@ h3 {
   justify-content: center;
   border-radius: 999px;
   padding: 13px 22px;
-  border: 1px solid var(--ink);
+  border: 1px solid var(--palette-burgundy);
+  color: var(--palette-burgundy);
   font-weight: 700;
-  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 .button:hover {
   transform: translateY(-2px);
+  background: var(--palette-rose);
+  border-color: var(--palette-rose);
+  color: var(--paper);
 }
 
 .button.primary {
   color: var(--paper);
-  background: var(--ink);
+  background: var(--palette-burgundy);
+  border-color: var(--palette-burgundy);
+}
+
+.button.primary:hover {
+  background: var(--palette-charcoal);
+  border-color: var(--palette-charcoal);
+  color: var(--paper);
 }
 
 .button.secondary {
   background: rgba(255, 255, 255, 0.54);
+  color: var(--palette-burgundy);
+  border-color: var(--palette-burgundy);
 }
 
 .button.full {
