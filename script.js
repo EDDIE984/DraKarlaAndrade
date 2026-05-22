@@ -63,10 +63,12 @@ form?.addEventListener("submit", async (event) => {
 
 const videoModal = document.getElementById("video-modal");
 const modalIframe = document.getElementById("modal-iframe");
+const modalFallback = document.getElementById("modal-fallback");
 
 document.querySelectorAll(".reel-thumb").forEach((btn) => {
   btn.addEventListener("click", () => {
     modalIframe.src = btn.dataset.src;
+    modalFallback.href = btn.dataset.fallback;
     videoModal.showModal();
   });
 });
@@ -74,6 +76,7 @@ document.querySelectorAll(".reel-thumb").forEach((btn) => {
 function closeVideoModal() {
   videoModal.close();
   modalIframe.src = "";
+  modalFallback.href = "#";
 }
 
 document.getElementById("modal-close").addEventListener("click", closeVideoModal);
