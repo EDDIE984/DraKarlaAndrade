@@ -384,6 +384,40 @@ h3 {
   object-position: center 38%;
 }
 
+.about-carousel {
+  position: relative;
+  aspect-ratio: 4 / 5;
+}
+
+.about-carousel img {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  aspect-ratio: auto;
+  opacity: 0;
+  animation: aboutCarousel 8s infinite;
+}
+
+.about-carousel img:nth-child(2) {
+  animation-delay: 4s;
+}
+
+@keyframes aboutCarousel {
+  0%,
+  42% {
+    opacity: 1;
+  }
+
+  50%,
+  92% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .media-story {
   display: grid;
   grid-template-columns: 1fr;
