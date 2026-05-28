@@ -660,7 +660,7 @@ h3 {
 
 .specialty-list {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: clamp(16px, 2vw, 24px);
   max-width: 1180px;
   margin: 0 auto;
@@ -706,7 +706,7 @@ h3 {
   min-height: 0;
   object-fit: contain;
   object-position: center 18%;
-  padding: clamp(10px, 1.2vw, 16px) clamp(14px, 1.6vw, 22px) clamp(76px, 7vw, 94px);
+  padding: clamp(10px, 1.2vw, 16px) clamp(12px, 1.35vw, 18px) clamp(74px, 6.4vw, 88px);
   transition: transform 0.35s ease;
 }
 
@@ -727,7 +727,7 @@ h3 {
   z-index: 2;
   display: grid;
   gap: 6px;
-  padding: 0 20px 16px;
+  padding: 0 16px 15px;
 }
 
 .specialty-card-body span {
@@ -747,7 +747,7 @@ h3 {
   max-width: 330px;
   margin: 0;
   color: #fff;
-  font-size: clamp(19px, 1.42vw, 23px);
+  font-size: clamp(18px, 1.24vw, 22px);
   line-height: 1.04;
 }
 
