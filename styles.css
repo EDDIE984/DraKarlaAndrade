@@ -318,24 +318,6 @@ h3 {
   border: 0;
 }
 
-.hero-note {
-  position: absolute;
-  right: 0;
-  bottom: 18px;
-  width: min(280px, 70%);
-  padding: 18px;
-  background: rgba(255, 255, 255, 0.86);
-  border: 1px solid rgba(255, 255, 255, 0.72);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
-
-.hero-note span {
-  display: block;
-  color: var(--muted);
-  font-size: 13px;
-}
-
 .intro-strip {
   display: flex;
   justify-content: space-between;
@@ -1196,12 +1178,6 @@ textarea:focus {
 
   h2 {
     font-size: clamp(38px, 12vw, 58px);
-  }
-
-  .hero-note {
-    position: static;
-    width: 100%;
-    margin-top: 12px;
   }
 
   .intro-strip,
