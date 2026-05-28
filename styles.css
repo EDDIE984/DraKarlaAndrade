@@ -297,14 +297,15 @@ h3 {
   position: relative;
   display: flex;
   align-items: center;
+  width: 100%;
   min-height: 0;
 }
 
 .hero-media img,
 .hero-media iframe {
-  width: min(100%, 520px);
+  width: 100%;
   height: auto;
-  aspect-ratio: 1;
+  aspect-ratio: 16 / 9;
   max-height: min(520px, 62dvh);
   margin-inline: auto;
   object-fit: cover;
