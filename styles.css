@@ -908,25 +908,25 @@ h3 {
 }
 
 .testimonial-card:nth-child(1) {
-  --testimonial-image: url("image/cardVideos/Karla Andrade 1.jpeg");
+  --testimonial-image: url("image/cardVideos/Portada video 1.png");
   --testimonial-position: center;
   --testimonial-size: contain;
 }
 
 .testimonial-card:nth-child(2) {
-  --testimonial-image: url("image/cardVideos/karla Andrade 2.jpg");
+  --testimonial-image: url("image/cardVideos/Portada video 2.jpeg");
   --testimonial-position: center;
   --testimonial-size: contain;
 }
 
 .testimonial-card:nth-child(3) {
-  --testimonial-image: url("image/cardVideos/Karla Andrade 3.jpg");
+  --testimonial-image: url("image/cardVideos/Portada video 3.png");
   --testimonial-position: center;
   --testimonial-size: contain;
 }
 
 .testimonial-card:nth-child(4) {
-  --testimonial-image: url("image/cardVideos/karla Andrade 4.jpg");
+  --testimonial-image: url("image/cardVideos/Portada video 4.jpeg");
   --testimonial-position: center;
   --testimonial-size: contain;
 }
