@@ -322,6 +322,39 @@ h3 {
   border: 0;
 }
 
+.sound-toggle {
+  position: absolute;
+  right: clamp(14px, 2vw, 22px);
+  bottom: clamp(14px, 2vw, 22px);
+  z-index: 2;
+  min-height: 44px;
+  padding: 11px 16px;
+  color: #762325;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 999px;
+  box-shadow: 0 14px 34px rgba(23, 18, 15, 0.18);
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.sound-toggle:hover {
+  transform: translateY(-2px);
+  background: var(--paper);
+}
+
+.sound-toggle[hidden] {
+  display: none;
+}
+
+.sound-toggle.is-active {
+  display: none;
+}
+
 .intro-strip {
   display: flex;
   justify-content: space-between;

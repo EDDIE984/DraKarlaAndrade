@@ -12,6 +12,9 @@ Archivo: `index.html`
   - `Tu cuerpo lleva anos hablandote.`
   - `Es hora de que alguien realmente te escuche.`
 - Se agrego un `span` dentro del `h1` para controlar el salto de linea desde CSS.
+- El video inicial intenta autoplay con audio usando `mute=0`.
+- El boton `Activar sonido` inicia oculto y aparece como respaldo si el navegador bloquea la reproduccion con audio.
+- El boton usa la API del iframe de YouTube con `enablejsapi=1` para ejecutar `unMute` y `playVideo` despues del clic.
 
 Archivo: `styles.css`
 
