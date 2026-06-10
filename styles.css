@@ -327,32 +327,50 @@ h3 {
   right: clamp(14px, 2vw, 22px);
   bottom: clamp(14px, 2vw, 22px);
   z-index: 2;
-  min-height: 44px;
-  padding: 11px 16px;
-  color: #762325;
-  font: inherit;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1;
-  background: rgba(255, 255, 255, 0.94);
-  border: 1px solid rgba(255, 255, 255, 0.72);
-  border-radius: 999px;
-  box-shadow: 0 14px 34px rgba(23, 18, 15, 0.18);
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  color: var(--paper);
+  background: rgba(23, 18, 15, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  border-radius: 50%;
+  backdrop-filter: blur(10px);
   cursor: pointer;
-  transition: transform 0.2s ease, background 0.2s ease;
+  transition: transform 0.2s ease, background 0.2s ease, opacity 0.2s ease;
 }
 
 .sound-toggle:hover {
   transform: translateY(-2px);
-  background: var(--paper);
+  background: rgba(23, 18, 15, 0.34);
 }
 
-.sound-toggle[hidden] {
-  display: none;
+.sound-toggle span {
+  position: relative;
+  width: 20px;
+  height: 16px;
+  border-left: 7px solid currentColor;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+
+.sound-toggle span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  border: 2px solid currentColor;
+  border-left: 0;
+  border-bottom: 0;
+  border-radius: 0 999px 0 0;
+  transform: translateY(-50%) rotate(45deg);
 }
 
 .sound-toggle.is-active {
-  display: none;
+  opacity: 0.42;
 }
 
 .intro-strip {

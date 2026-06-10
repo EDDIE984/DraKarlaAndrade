@@ -3,8 +3,6 @@ const form = document.querySelector("[data-form]");
 const message = document.querySelector("[data-message]");
 const heroVideo = document.getElementById("hero-video");
 const soundToggle = document.querySelector("[data-sound-toggle]");
-let heroPlayer;
-let heroVideoStarted = false;
 
 function updateHeader() {
   header?.classList.toggle("is-scrolled", window.scrollY > 12);
@@ -13,73 +11,25 @@ function updateHeader() {
 window.addEventListener("scroll", updateHeader, { passive: true });
 updateHeader();
 
-function showSoundToggle() {
-  if (!heroVideoStarted && soundToggle) {
-    soundToggle.hidden = false;
-  }
-}
-
-function hideSoundToggle() {
-  soundToggle?.classList.add("is-active");
-  soundToggle?.setAttribute("aria-label", "Sonido activado");
-}
-
-function initHeroVideoPlayer() {
-  if (!heroVideo || !window.YT?.Player) return;
-
-  heroPlayer = new window.YT.Player("hero-video", {
-    events: {
-      onReady: (event) => {
-        event.target.unMute();
-        event.target.playVideo();
-        window.setTimeout(showSoundToggle, 2200);
-      },
-      onStateChange: (event) => {
-        if (event.data === window.YT.PlayerState.PLAYING) {
-          heroVideoStarted = true;
-          hideSoundToggle();
-        }
-      },
-    },
-  });
-}
-
-if (heroVideo) {
-  window.onYouTubeIframeAPIReady = initHeroVideoPlayer;
-
-  if (!document.querySelector('script[src="https://www.youtube.com/iframe_api"]')) {
-    const youtubeApi = document.createElement("script");
-    youtubeApi.src = "https://www.youtube.com/iframe_api";
-    document.head.appendChild(youtubeApi);
-  }
-
-  window.setTimeout(showSoundToggle, 3500);
-}
-
 soundToggle?.addEventListener("click", () => {
-  if (heroPlayer?.unMute && heroPlayer?.playVideo) {
-    heroPlayer.unMute();
-    heroPlayer.playVideo();
-  } else {
-    heroVideo?.contentWindow?.postMessage(
-      JSON.stringify({
-        event: "command",
-        func: "unMute",
-        args: [],
-      }),
-      "*"
-    );
-    heroVideo?.contentWindow?.postMessage(
-      JSON.stringify({
-        event: "command",
-        func: "playVideo",
-        args: [],
-      }),
-      "*"
-    );
-  }
-  heroVideoStarted = true;
-  hideSoundToggle();
+  heroVideo?.contentWindow?.postMessage(
+    JSON.stringify({
+      event: "command",
+      func: "unMute",
+      args: [],
+    }),
+    "*"
+  );
+  heroVideo?.contentWindow?.postMessage(
+    JSON.stringify({
+      event: "command",
+      func: "playVideo",
+      args: [],
+    }),
+    "*"
+  );
+  soundToggle.classList.add("is-active");
+  soundToggle.setAttribute("aria-label", "Sonido activado");
 });
 
 function isValidEmail(email) {
