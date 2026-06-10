@@ -348,6 +348,7 @@ h3 {
 
 .about {
   align-items: start;
+  overflow: hidden;
   background: #df8f9f;
 }
 
