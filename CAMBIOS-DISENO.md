@@ -32,10 +32,9 @@ Archivo: `index.html`
 Archivo: `styles.css`
 
 - Se elimino la regla `.specialty-copy` porque el texto ya no existe.
-- El fondo de la seccion se intento cambiar a `#762325`, pero luego se revirtio por solicitud.
-- El fondo final de Especialidades quedo como estaba antes:
-  - patron de lineas sutiles
-  - degradado claro rosado/verde
+- La seccion `specialties` se coloco dentro de un card tipo `section-band`.
+- El fondo final de Especialidades cambio a `#762325`, el mismo color del hero inicial.
+- Todo el texto de Especialidades quedo en blanco para mantener contraste.
 
 ## Sobre mi
 
@@ -85,6 +84,13 @@ Nota: el boton `Agendar cita` del header se mantiene activo.
 
 - `index.html`
 - `styles.css`
+
+## Espaciado entre cards
+
+Archivo: `styles.css`
+
+- Se agrego `margin-block` a `.section-band` para separar visualmente los cards/secciones.
+- En movil el espaciado vertical de `.section-band` queda en `12px`.
 
 ## Pendiente para futuras iteraciones
 

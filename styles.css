@@ -159,6 +159,7 @@ a {
 }
 
 .section-band {
+  margin-block: clamp(18px, 2.6vw, 36px);
   margin-inline: clamp(14px, 4vw, 56px);
   border-radius: clamp(20px, 4vw, 36px);
 }
@@ -640,11 +641,9 @@ h3 {
 
 .specialties {
   padding: clamp(28px, 4vw, 52px) clamp(20px, 5.5vw, 76px);
-  background:
-    linear-gradient(90deg, rgba(116, 29, 48, 0.08) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(255, 250, 246, 0.96) 0%, rgba(238, 243, 230, 0.9) 100%);
-  background-size: 52px 52px, auto;
-  color: var(--ink);
+  overflow: hidden;
+  background: #762325;
+  color: var(--paper);
 }
 
 .specialty-heading {
@@ -658,8 +657,20 @@ h3 {
 
 .specialty-heading h2 {
   max-width: 560px;
+  color: var(--paper);
   font-size: clamp(42px, 5.3vw, 64px);
   line-height: 0.98;
+}
+
+.specialties .eyebrow {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.specialties h2,
+.specialties h3,
+.specialties p,
+.specialties span {
+  color: var(--paper);
 }
 
 .specialty-list {
@@ -1204,6 +1215,7 @@ textarea:focus {
   }
 
   .section-band {
+    margin-block: 12px;
     margin-inline: 8px;
   }
 
