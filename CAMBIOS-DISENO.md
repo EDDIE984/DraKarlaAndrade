@@ -14,7 +14,7 @@ Archivo: `index.html`
 - Se agrego un `span` dentro del `h1` para controlar el salto de linea desde CSS.
 - El video inicial mantiene autoplay con `mute=1` para que arranque de forma confiable.
 - Se agrego un boton-icono transparente sobre el video para activar sonido.
-- El boton usa `enablejsapi=1` y envia comandos `unMute` y `playVideo` al iframe de YouTube despues del clic.
+- El boton cambia el iframe a `mute=0` despues del clic y envia comandos `setVolume`, `unMute` y `playVideo`.
 
 Archivo: `styles.css`
 

@@ -12,13 +12,57 @@ window.addEventListener("scroll", updateHeader, { passive: true });
 updateHeader();
 
 soundToggle?.addEventListener("click", () => {
+  if (heroVideo?.src) {
+    const videoUrl = new URL(heroVideo.src);
+    videoUrl.searchParams.set("autoplay", "1");
+    videoUrl.searchParams.set("mute", "0");
+    videoUrl.searchParams.set("enablejsapi", "1");
+    videoUrl.searchParams.set("sound", Date.now().toString());
+    heroVideo.src = videoUrl.toString();
+  }
+
+  window.setTimeout(() => {
+    heroVideo?.contentWindow?.postMessage(
+      JSON.stringify({
+        event: "command",
+        func: "setVolume",
+        args: [100],
+      }),
+      "https://www.youtube.com"
+    );
+    heroVideo?.contentWindow?.postMessage(
+      JSON.stringify({
+        event: "command",
+        func: "unMute",
+        args: [],
+      }),
+      "https://www.youtube.com"
+    );
+    heroVideo?.contentWindow?.postMessage(
+      JSON.stringify({
+        event: "command",
+        func: "playVideo",
+        args: [],
+      }),
+      "https://www.youtube.com"
+    );
+  }, 250);
+
+  heroVideo?.contentWindow?.postMessage(
+    JSON.stringify({
+      event: "command",
+      func: "setVolume",
+      args: [100],
+    }),
+    "https://www.youtube.com"
+  );
   heroVideo?.contentWindow?.postMessage(
     JSON.stringify({
       event: "command",
       func: "unMute",
       args: [],
     }),
-    "*"
+    "https://www.youtube.com"
   );
   heroVideo?.contentWindow?.postMessage(
     JSON.stringify({
@@ -26,7 +70,7 @@ soundToggle?.addEventListener("click", () => {
       func: "playVideo",
       args: [],
     }),
-    "*"
+    "https://www.youtube.com"
   );
   soundToggle.classList.add("is-active");
   soundToggle.setAttribute("aria-label", "Sonido activado");
