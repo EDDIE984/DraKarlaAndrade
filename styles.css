@@ -1,4 +1,20 @@
 @font-face {
+  font-family: "Neue Montreal";
+  src: url("fuente/NEUEMONTREAL-REGULAR.OTF") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("fuente/NEUEMONTREAL-BOLD.OTF") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "Satoshi";
   src: url("fuente/SATOSHI-BLACK-titulos.OTF") format("opentype");
   font-weight: 900;
@@ -51,8 +67,8 @@
   --line: rgba(23, 18, 15, 0.16);
   --shadow: 0 24px 60px rgba(45, 30, 22, 0.12);
   --radius: 8px;
-  --serif: "Satoshi", Georgia, serif;
-  --sans: "Satoshi", Arial, sans-serif;
+  --serif: "Satoshi", "Neue Montreal", Georgia, serif;
+  --sans: "Neue Montreal", "Satoshi", Arial, sans-serif;
   --display: "Caveat", cursive;
   --palette-rose: #ce92a1;
   --palette-burgundy: #741d30;

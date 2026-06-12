@@ -100,4 +100,4 @@ Archivo: `styles.css`
 - Revisar visualmente cada seccion en desktop y movil.
 - Ajustar tonos rosados si el fondo de `Sobre mi` o `Agendar cita` se siente demasiado fuerte.
 - Revisar si el titulo del hero necesita menor tamano en pantallas pequenas.
-- Definir si se mantendra `Satoshi` como reemplazo local de Neue Montreal.
+- Definir si se mantendra `Satoshi` como reemplazo local de Neue Montreal. Resuelto: se agregaron `NEUEMONTREAL-REGULAR.OTF` y `NEUEMONTREAL-BOLD.OTF`; el cuerpo del sitio ahora usa `Neue Montreal` local y `Satoshi` queda como fuente de titulos/pesos altos.
