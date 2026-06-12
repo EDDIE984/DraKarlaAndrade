@@ -204,7 +204,7 @@ a {
 
 .hero .eyebrow {
   color: #df91a2;
-  text-transform: none;
+  text-transform: lowercase;
 }
 
 .hero .hero-doctor-name {
