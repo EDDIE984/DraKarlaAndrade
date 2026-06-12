@@ -755,13 +755,12 @@ h3 {
   min-height: 250px;
   aspect-ratio: 1.14 / 1;
   color: #fff;
-  background: var(--palette-burgundy);
-  border: 1px solid rgba(116, 29, 48, 0.18);
+  background: #873036;
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: var(--radius);
-  box-shadow: 0 22px 50px rgba(45, 30, 22, 0.12);
+  box-shadow: none;
   overflow: hidden;
   isolation: isolate;
-  transition: border-color 0.2s ease, filter 0.2s ease;
 }
 
 .specialty-card::before {
@@ -770,17 +769,18 @@ h3 {
   inset: 0;
   z-index: 1;
   background:
-    linear-gradient(180deg, rgba(23, 18, 15, 0) 36%, rgba(23, 18, 15, 0.48) 74%, rgba(23, 18, 15, 0.86) 100%),
-    linear-gradient(135deg, rgba(116, 29, 48, 0.32), rgba(116, 29, 48, 0) 48%);
+    linear-gradient(180deg, rgba(118, 35, 37, 0) 34%, rgba(118, 35, 37, 0.54) 72%, rgba(57, 17, 20, 0.9) 100%),
+    linear-gradient(135deg, rgba(118, 35, 37, 0.22), rgba(118, 35, 37, 0) 50%);
   pointer-events: none;
-  transition: opacity 0.25s ease;
 }
 
 .specialty-card figure {
   grid-column: 1;
   grid-row: 1 / -1;
   margin: 0;
-  background: linear-gradient(180deg, #f8edf1 0%, #e7c4cf 100%);
+  background:
+    radial-gradient(circle at 50% 28%, rgba(214, 117, 139, 0.62) 0 28%, transparent 29%),
+    linear-gradient(180deg, #f1d2da 0%, #d89bab 58%, #9a3d45 100%);
 }
 
 .specialty-card img {
@@ -790,21 +790,6 @@ h3 {
   object-fit: contain;
   object-position: center 18%;
   padding: clamp(10px, 1.2vw, 16px) clamp(12px, 1.35vw, 18px) clamp(74px, 6.4vw, 88px);
-  transition: transform 0.35s ease, filter 0.35s ease;
-}
-
-.specialty-card:hover {
-  border-color: rgba(255, 255, 255, 0.24);
-  filter: saturate(1.04);
-}
-
-.specialty-card:hover::before {
-  opacity: 0.9;
-}
-
-.specialty-card:hover img {
-  transform: scale(1.035);
-  filter: contrast(1.04);
 }
 
 .specialty-card-body {
