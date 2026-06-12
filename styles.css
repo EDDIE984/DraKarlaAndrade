@@ -203,7 +203,8 @@ a {
 }
 
 .hero .eyebrow {
-  color: rgba(255, 255, 255, 0.76);
+  color: #df91a2;
+  text-transform: none;
 }
 
 .hero .hero-doctor-name {
