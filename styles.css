@@ -1089,6 +1089,22 @@ textarea:focus {
   align-items: center;
 }
 
+.location .eyebrow {
+  color: #e495a2;
+  font-family: "Riccione", serif;
+  font-size: clamp(18px, 1.5vw, 22px);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.location h2 {
+  color: #762325;
+  font-family: "Neue Montreal", sans-serif;
+  font-weight: 700;
+}
+
 .map-wrap {
   min-height: 360px;
   overflow: hidden;
