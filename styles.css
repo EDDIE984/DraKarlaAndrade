@@ -515,7 +515,20 @@ h3 {
   display: grid;
   grid-template-columns: 1fr;
   padding: clamp(22px, 3.2vw, 38px);
-  background: linear-gradient(130deg, #eef3e6 0%, #fff 55%, #fae1cd 100%);
+  background: #fff;
+}
+
+.consulting-room-card {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+.consulting-room-card img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .media-panel {
