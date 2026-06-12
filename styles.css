@@ -714,8 +714,8 @@ h3 {
 .specialties {
   padding: clamp(28px, 4vw, 52px) clamp(20px, 5.5vw, 76px);
   overflow: hidden;
-  background: #762325;
-  color: var(--paper);
+  background: linear-gradient(130deg, #eef3e6 0%, #fff 55%, #fae1cd 100%);
+  color: var(--ink);
 }
 
 .specialty-heading {
@@ -729,16 +729,15 @@ h3 {
 
 .specialty-heading h2 {
   max-width: 560px;
-  color: var(--paper);
+  color: var(--ink);
   font-size: clamp(42px, 5.3vw, 64px);
   line-height: 0.98;
 }
 
 .specialties .eyebrow {
-  color: rgba(255, 255, 255, 0.76);
+  color: var(--rose-deep);
 }
 
-.specialties h2,
 .specialties h3,
 .specialties p,
 .specialties span {
