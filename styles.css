@@ -994,16 +994,20 @@ h3 {
 }
 
 .booking .eyebrow {
-  color: #762325;
-  font-family: var(--serif);
-  font-size: 13px;
-  font-weight: 500;
+  color: #e495a2;
+  font-family: "Riccione", serif;
+  font-size: clamp(18px, 1.5vw, 22px);
+  font-style: italic;
+  font-weight: 400;
   letter-spacing: 0;
+  text-transform: none;
 }
 
 .booking-copy h2 {
   max-width: 680px;
-  font-weight: 900;
+  color: #762325;
+  font-family: "Neue Montreal", sans-serif;
+  font-weight: 700;
   line-height: 0.94;
 }
 
