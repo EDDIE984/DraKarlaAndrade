@@ -740,6 +740,7 @@ h3 {
   font-size: clamp(18px, 1.5vw, 22px);
   font-style: italic;
   font-weight: 400;
+  text-transform: none;
 }
 
 .specialties h3,
