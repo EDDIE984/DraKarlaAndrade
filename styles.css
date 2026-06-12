@@ -714,10 +714,7 @@ h3 {
 .specialties {
   padding: clamp(28px, 4vw, 52px) clamp(20px, 5.5vw, 76px);
   overflow: hidden;
-  background:
-    linear-gradient(90deg, rgba(116, 29, 48, 0.08) 1px, transparent 1px),
-    linear-gradient(135deg, #f4eee6 0%, #fffaf6 58%, #eadbd4 100%);
-  background-size: 46px 46px, auto;
+  background: var(--paper);
   color: var(--ink);
 }
 
