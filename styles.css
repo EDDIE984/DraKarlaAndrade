@@ -729,8 +729,10 @@ h3 {
 
 .specialty-heading h2 {
   max-width: 560px;
-  color: var(--ink);
+  color: #762325;
+  font-family: "Neue Montreal", sans-serif;
   font-size: clamp(42px, 5.3vw, 64px);
+  font-weight: 700;
   line-height: 0.98;
 }
 
