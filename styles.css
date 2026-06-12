@@ -735,7 +735,11 @@ h3 {
 }
 
 .specialties .eyebrow {
-  color: var(--rose-deep);
+  color: #e495a2;
+  font-family: "Riccione", serif;
+  font-size: clamp(18px, 1.5vw, 22px);
+  font-style: italic;
+  font-weight: 400;
 }
 
 .specialties h3,
