@@ -761,7 +761,7 @@ h3 {
   box-shadow: 0 22px 50px rgba(45, 30, 22, 0.12);
   overflow: hidden;
   isolation: isolate;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: border-color 0.2s ease, filter 0.2s ease;
 }
 
 .specialty-card::before {
@@ -773,6 +773,7 @@ h3 {
     linear-gradient(180deg, rgba(23, 18, 15, 0) 36%, rgba(23, 18, 15, 0.48) 74%, rgba(23, 18, 15, 0.86) 100%),
     linear-gradient(135deg, rgba(116, 29, 48, 0.32), rgba(116, 29, 48, 0) 48%);
   pointer-events: none;
+  transition: opacity 0.25s ease;
 }
 
 .specialty-card figure {
@@ -789,16 +790,21 @@ h3 {
   object-fit: contain;
   object-position: center 18%;
   padding: clamp(10px, 1.2vw, 16px) clamp(12px, 1.35vw, 18px) clamp(74px, 6.4vw, 88px);
-  transition: transform 0.35s ease;
+  transition: transform 0.35s ease, filter 0.35s ease;
 }
 
 .specialty-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 28px 62px rgba(45, 30, 22, 0.18);
+  border-color: rgba(255, 255, 255, 0.24);
+  filter: saturate(1.04);
+}
+
+.specialty-card:hover::before {
+  opacity: 0.9;
 }
 
 .specialty-card:hover img {
-  transform: scale(1.045);
+  transform: scale(1.035);
+  filter: contrast(1.04);
 }
 
 .specialty-card-body {
