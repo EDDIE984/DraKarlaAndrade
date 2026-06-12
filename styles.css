@@ -756,87 +756,20 @@ h3 {
 }
 
 .specialty-card {
-  position: relative;
-  display: grid;
-  grid-template-rows: 1fr auto;
-  min-height: 250px;
-  aspect-ratio: 1.14 / 1;
-  color: #fff;
-  background: #873036;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  border-radius: var(--radius);
+  background: transparent;
+  border: 0;
+  border-radius: 0;
   box-shadow: none;
-  overflow: hidden;
-  isolation: isolate;
-}
-
-.specialty-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background:
-    linear-gradient(180deg, rgba(118, 35, 37, 0) 34%, rgba(118, 35, 37, 0.54) 72%, rgba(57, 17, 20, 0.9) 100%),
-    linear-gradient(135deg, rgba(118, 35, 37, 0.22), rgba(118, 35, 37, 0) 50%);
-  pointer-events: none;
 }
 
 .specialty-card figure {
-  grid-column: 1;
-  grid-row: 1 / -1;
   margin: 0;
-  background:
-    radial-gradient(circle at 50% 28%, rgba(214, 117, 139, 0.62) 0 28%, transparent 29%),
-    linear-gradient(180deg, #f1d2da 0%, #d89bab 58%, #9a3d45 100%);
 }
 
 .specialty-card img {
+  display: block;
   width: 100%;
-  height: 100%;
-  min-height: 0;
-  object-fit: contain;
-  object-position: center 18%;
-  padding: clamp(10px, 1.2vw, 16px) clamp(12px, 1.35vw, 18px) clamp(74px, 6.4vw, 88px);
-}
-
-.specialty-card-body {
-  align-self: end;
-  grid-column: 1;
-  grid-row: 1 / -1;
-  position: relative;
-  z-index: 2;
-  display: grid;
-  gap: 6px;
-  padding: 0 16px 15px;
-}
-
-.specialty-card-body span {
-  width: fit-content;
-  padding: 5px 9px;
-  color: #fff;
-  font-size: 12px;
-  line-height: 1;
-  letter-spacing: 0.08em;
-  background: rgba(255, 255, 255, 0.18);
-  border: 1px solid rgba(255, 255, 255, 0.34);
-  border-radius: 999px;
-  backdrop-filter: blur(12px);
-}
-
-.specialty-card h3 {
-  max-width: 330px;
-  margin: 0;
-  color: #fff;
-  font-size: clamp(18px, 1.24vw, 22px);
-  line-height: 1.04;
-}
-
-.specialty-card p {
-  max-width: 330px;
-  margin: 0;
-  color: rgba(255, 255, 255, 0.86);
-  font-size: 13px;
-  line-height: 1.3;
+  height: auto;
 }
 
 .testimonials {
@@ -1247,14 +1180,6 @@ textarea:focus {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .specialty-card {
-    min-height: 240px;
-  }
-
-  .specialty-card img {
-    padding-bottom: 88px;
-  }
-
   .specialty-heading {
     display: grid;
     gap: 12px;
@@ -1379,29 +1304,10 @@ textarea:focus {
 
   .specialty-card {
     grid-column: auto;
-    min-height: 250px;
-    aspect-ratio: 1 / 0.92;
-  }
-
-  .specialty-card img {
-    padding: 12px 14px 92px;
-  }
-
-  .specialty-card-body {
-    padding: 0 18px 16px;
-  }
-
-  .specialty-card h3 {
-    max-width: none;
-    font-size: clamp(22px, 6.4vw, 28px);
   }
 
   .specialty-heading h2 {
     font-size: clamp(34px, 10vw, 46px);
-  }
-
-  .specialty-card p {
-    max-width: none;
   }
 
   .map-wrap,
