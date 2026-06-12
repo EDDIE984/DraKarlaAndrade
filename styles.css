@@ -452,7 +452,9 @@ h3 {
   max-width: 660px;
   padding-top: 48px;
   color: var(--paper);
+  font-family: "Neue Montreal", sans-serif;
   font-size: clamp(17px, 1.35vw, 19px);
+  font-weight: 400;
 }
 
 .about-content p {
