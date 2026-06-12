@@ -946,7 +946,7 @@ h3 {
 .testimonial-grid {
   display: grid;
   align-self: start;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   grid-auto-rows: max-content;
   gap: clamp(14px, 1.8vw, 20px);
   align-content: start;
@@ -960,37 +960,18 @@ h3 {
 
 .testimonials .video-placeholder.small {
   position: relative;
-  aspect-ratio: 1.68 / 1;
+  aspect-ratio: 9 / 16;
   min-height: 0;
   max-height: none;
   padding: 18px;
   border: 1px solid rgba(116, 29, 48, 0.18);
   border-radius: var(--radius);
+  background:
+    linear-gradient(180deg, rgba(23, 18, 15, 0.02) 0%, rgba(23, 18, 15, 0.68) 100%),
+    var(--testimonial-image) var(--testimonial-position, center) / cover no-repeat;
   background-color: #eadbd4;
   box-shadow: 0 18px 42px rgba(45, 30, 22, 0.13);
   transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
-}
-
-.testimonials .video-placeholder.small::before,
-.testimonials .video-placeholder.small::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-}
-
-.testimonials .video-placeholder.small::before {
-  z-index: 0;
-  background: var(--testimonial-image) var(--testimonial-position, center) / cover no-repeat;
-  filter: blur(12px) saturate(0.95);
-  transform: scale(1.08);
-}
-
-.testimonials .video-placeholder.small::after {
-  z-index: 1;
-  background:
-    linear-gradient(180deg, rgba(23, 18, 15, 0.02) 0%, rgba(23, 18, 15, 0.68) 100%),
-    var(--testimonial-image) var(--testimonial-position, center) / contain no-repeat;
 }
 
 .reel-thumb:hover .video-placeholder.small {
@@ -1373,11 +1354,10 @@ textarea:focus {
   }
 
   .testimonial-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .testimonials .video-placeholder.small {
-    aspect-ratio: 1.6 / 1;
     padding: 14px;
   }
 
