@@ -451,7 +451,7 @@ h3 {
   gap: 14px;
   max-width: 660px;
   padding-top: 48px;
-  color: #342b26;
+  color: var(--paper);
   font-size: clamp(17px, 1.35vw, 19px);
 }
 
