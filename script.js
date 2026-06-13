@@ -100,8 +100,10 @@ form?.addEventListener("submit", async (event) => {
 
   const payload = Object.fromEntries(data.entries());
   const submitButton = form.querySelector("button[type='submit']");
+  const defaultButtonText = submitButton.textContent;
 
   submitButton.disabled = true;
+  submitButton.textContent = "Enviando...";
   message.textContent = "Enviando solicitud...";
 
   try {
@@ -119,12 +121,17 @@ form?.addEventListener("submit", async (event) => {
       throw new Error(result.error || "No se pudo enviar la solicitud.");
     }
 
+    submitButton.textContent = "Solicitud enviada";
     message.textContent = `Gracias, ${nombre}. Recibimos tu solicitud para el ${fecha} a las ${hora}.`;
     form.reset();
   } catch (error) {
     message.textContent = error.message || "No se pudo enviar la solicitud. Intentalo nuevamente.";
+    submitButton.textContent = defaultButtonText;
   } finally {
-    submitButton.disabled = false;
+    window.setTimeout(() => {
+      submitButton.disabled = false;
+      submitButton.textContent = defaultButtonText;
+    }, 1200);
   }
 });
 

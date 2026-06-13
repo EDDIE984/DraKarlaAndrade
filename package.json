@@ -3,6 +3,6 @@
     "check:api": "node --check api/enviar.js"
   },
   "dependencies": {
-    "nodemailer": "^8.0.7"
+    "resend": "^6.12.4"
   }
 }
