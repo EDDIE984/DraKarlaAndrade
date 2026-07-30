@@ -250,10 +250,40 @@
             Nombre
             <input type="text" name="nombre" autocomplete="name" required placeholder="Tu nombre completo">
           </label>
-          <label>
-            Teléfono
-            <input type="tel" name="telefono" autocomplete="tel" required placeholder="099 000 0000">
-          </label>
+          <div class="form-grid">
+            <label>
+              Número de cédula
+              <input
+                type="text"
+                name="cedula"
+                autocomplete="off"
+                inputmode="numeric"
+                pattern="[0-9]{10}"
+                maxlength="10"
+                required
+                placeholder="Ej. 1712345678"
+                title="Ingresa los 10 dígitos de tu cédula"
+              >
+            </label>
+            <label>
+              Fecha de nacimiento
+              <input type="date" name="fechaNacimiento" autocomplete="bday" required>
+            </label>
+          </div>
+          <div class="form-grid">
+            <label>
+              Teléfono
+              <input type="tel" name="telefono" autocomplete="tel" required placeholder="099 000 0000">
+            </label>
+            <label>
+              ¿Cuenta con seguro?
+              <select name="seguro" required>
+                <option value="">Seleccionar</option>
+                <option value="Sí">Sí</option>
+                <option value="No">No</option>
+              </select>
+            </label>
+          </div>
           <label>
             Correo <span>opcional</span>
             <input type="email" name="correo" autocomplete="email" placeholder="tu@email.com">

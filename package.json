@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "dev": "node dev-server.js",
     "check:api": "node --check api/enviar.js"
   },
   "dependencies": {

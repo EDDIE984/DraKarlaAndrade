@@ -87,9 +87,25 @@ form?.addEventListener("submit", async (event) => {
   const fecha = data.get("fecha")?.toString();
   const hora = data.get("hora")?.toString();
   const correo = data.get("correo")?.toString().trim();
+  const cedula = data.get("cedula")?.toString().trim();
+  const fechaNacimiento = data.get("fechaNacimiento")?.toString();
+  const seguro = data.get("seguro")?.toString();
 
-  if (!nombre || !fecha || !hora || !data.get("telefono")?.toString().trim()) {
-    message.textContent = "Completa fecha, hora, nombre y telefono para solicitar la cita.";
+  if (
+    !nombre ||
+    !fecha ||
+    !hora ||
+    !data.get("telefono")?.toString().trim() ||
+    !cedula ||
+    !fechaNacimiento ||
+    !seguro
+  ) {
+    message.textContent = "Completa todos los campos obligatorios para solicitar la cita.";
+    return;
+  }
+
+  if (!/^\d{10}$/.test(cedula)) {
+    message.textContent = "Ingresa una cédula válida de 10 dígitos.";
     return;
   }
 

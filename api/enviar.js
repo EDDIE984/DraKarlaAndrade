@@ -1,12 +1,23 @@
 const { Resend } = require("resend");
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const REQUIRED_FIELDS = ["fecha", "hora", "nombre", "telefono"];
+const REQUIRED_FIELDS = [
+  "fecha",
+  "hora",
+  "nombre",
+  "cedula",
+  "fechaNacimiento",
+  "telefono",
+  "seguro",
+];
 const FIELD_LIMITS = {
   fecha: 20,
   hora: 20,
   nombre: 120,
+  cedula: 10,
+  fechaNacimiento: 20,
   telefono: 40,
+  seguro: 2,
   correo: 254,
   motivo: 1500,
 };
@@ -53,7 +64,10 @@ function getFieldLabel(key) {
     fecha: "Fecha solicitada",
     hora: "Hora solicitada",
     nombre: "Nombre",
+    cedula: "Número de cédula",
+    fechaNacimiento: "Fecha de nacimiento",
     telefono: "Telefono",
+    seguro: "Cuenta con seguro",
     correo: "Correo",
     motivo: "Motivo de consulta",
   };
@@ -148,6 +162,14 @@ module.exports = async function handler(req, res) {
 
   if (data.correo && !EMAIL_REGEX.test(data.correo)) {
     return res.status(400).json({ error: "El correo ingresado no es valido." });
+  }
+
+  if (!/^\d{10}$/.test(data.cedula)) {
+    return res.status(400).json({ error: "La cedula debe tener 10 digitos." });
+  }
+
+  if (!["Sí", "No"].includes(data.seguro)) {
+    return res.status(400).json({ error: "La respuesta sobre el seguro no es valida." });
   }
 
   const metadata = {
